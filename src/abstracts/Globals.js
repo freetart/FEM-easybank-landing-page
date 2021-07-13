@@ -14,7 +14,7 @@ const Globals = createGlobalStyle`
     --lightGrayishBlue: hsl(220, 16%, 96%);
     --veryLightGray: hsl(0, 0%, 98%);
     /* radius */
-    --mainRadius: 1rem;
+    --mainRadius: 5rem;
     /* shadows */
     --mainShadow: 0.1rem 0.3rem 1rem rgba(0, 0, 0, .1);
     /* transitions */
