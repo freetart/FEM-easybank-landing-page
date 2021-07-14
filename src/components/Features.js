@@ -11,7 +11,7 @@ const Container = styled.div`
 
   .section-lead {
     width: 50%;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 
   .features {
