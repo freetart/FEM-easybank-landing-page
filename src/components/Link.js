@@ -6,10 +6,13 @@ const Container = styled.li`
     ${textStyles}
     font-size: var(--xxs);
     color: var(--grayishBlue);
+    padding: 3.1rem 0;
+    outline: 0;
 
     &:hover,
     &:focus {
       border-bottom: 0.3rem solid var(--limeGreen);
+      border-top: 0.3rem solid var(--limeGreen);
     }
   }
 `;

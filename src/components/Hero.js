@@ -8,6 +8,7 @@ import {
   headingStyles,
   textStyles,
 } from "../abstracts/Mixins";
+import Lead from "./styledElements/Lead";
 
 const Container = styled.div`
   display: grid;
@@ -22,13 +23,8 @@ const Container = styled.div`
 
   .hero-heading {
     ${headingStyles}
-    font-size: var(--xxl)
-  }
-
-  .hero-desc {
-    ${textStyles}
-    font-size: var(--xxs);
-    padding: 2rem 0;
+    font-size: 5rem;
+    color: var(--darkBlue);
   }
 
   .hero-imgs {
@@ -50,15 +46,15 @@ const Container = styled.div`
 
 function Hero() {
   return (
-    <header>
+    <header style={{ backgroundColor: "var(--white)" }}>
       <Container>
         <div className="hero-info">
           <h1 className="hero-heading">Next generation digital banking</h1>
-          <p className="hero-desc">
+          <Lead>
             Take your financial life online. Your Easybank account will be a
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
-          </p>
+          </Lead>
           <Button>Request Invite</Button>
         </div>
         <div className="hero-imgs">

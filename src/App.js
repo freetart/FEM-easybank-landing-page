@@ -1,6 +1,7 @@
 import Globals from "./abstracts/Globals";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Features from "./components/Features";
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
       <Globals />
       <Navbar />
       <Hero />
+      <main>
+        <Features />
+      </main>
     </>
   );
 }
