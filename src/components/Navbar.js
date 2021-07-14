@@ -7,6 +7,8 @@ import Button from "./styledElements/Button";
 const Nav = styled.nav`
   position: fixed;
   width: 100%;
+  background-color: var(--white);
+  z-index: 1000;
 `;
 
 const Container = styled.div`

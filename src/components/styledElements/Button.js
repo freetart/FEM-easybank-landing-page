@@ -9,6 +9,7 @@ const Button = styled.a`
   padding: 1rem 2rem;
   border-radius: var(--mainRadius);
   cursor: pointer;
+  display: inline-block;
 `;
 
 export default Button;
