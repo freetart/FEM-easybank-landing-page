@@ -10,6 +10,12 @@ const Button = styled.a`
   border-radius: var(--mainRadius);
   cursor: pointer;
   display: inline-block;
+  transition: var(--mainTransition);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 `;
 
 export default Button;

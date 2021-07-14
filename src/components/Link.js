@@ -6,6 +6,11 @@ const Container = styled.li`
     ${textStyles}
     font-size: var(--xxs);
     color: var(--grayishBlue);
+
+    &:hover,
+    &:focus {
+      border-bottom: 0.3rem solid var(--limeGreen);
+    }
   }
 `;
 
