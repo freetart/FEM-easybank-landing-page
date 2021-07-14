@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import Title from "./styledElements/Title";
 import Lead from "./styledElements/Lead";
-import { maxWidthLg, sectionSpacingSm } from "../abstracts/Mixins";
+import { maxWidthLg, sectionSpacingMd } from "../abstracts/Mixins";
 import Feature from "./Feature";
 import { featuresData } from "../data";
 
 const Container = styled.div`
   ${maxWidthLg}
-  ${sectionSpacingSm}
+  ${sectionSpacingMd}
 
   .section-lead {
     width: 50%;

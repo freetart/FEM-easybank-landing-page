@@ -5,19 +5,17 @@ const Container = styled.li`
   .link {
     ${textStyles}
     font-size: var(--xxs);
-    color: var(--grayishBlue);
-    padding: 3.1rem 0;
-    outline: 0;
+    transition: var(--mainTransition);
+    color: var(--white);
 
     &:hover,
     &:focus {
-      border-bottom: 0.3rem solid var(--limeGreen);
-      border-top: 0.3rem solid var(--limeGreen);
+      color: var(--limeGreen);
     }
   }
 `;
 
-function Link({ text }) {
+function FooterLink({ text }) {
   return (
     <Container>
       <a className="link" href="#!">
@@ -27,4 +25,4 @@ function Link({ text }) {
   );
 }
 
-export default Link;
+export default FooterLink;

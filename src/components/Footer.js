@@ -9,6 +9,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import Button from "./styledElements/Button";
+import FooterLink from "./FooterLink";
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -46,18 +47,6 @@ const Container = styled.div`
     margin: 1rem 0;
   }
 
-  .footer-link {
-    ${textStyles}
-    font-size: var(--xxs);
-    transition: var(--mainTransition);
-    color: var(--white);
-
-    &:hover,
-    &:focus {
-      color: var(--limeGreen);
-    }
-  }
-
   .footer-copyright {
     ${textStyles}
     font-size: 1.2rem;
@@ -90,38 +79,14 @@ function Footer() {
           </div>
         </div>
         <ul className="footer-col">
-          <li className="footer-list">
-            <a className="footer-link" href="#!">
-              About Us
-            </a>
-          </li>
-          <li className="footer-list">
-            <a className="footer-link" href="#!">
-              Contact
-            </a>
-          </li>
-          <li className="footer-list">
-            <a className="footer-link" href="#!">
-              Blog
-            </a>
-          </li>
+          <FooterLink text="About Us" />
+          <FooterLink text="Contact" />
+          <FooterLink text="Blog" />
         </ul>
         <ul className="footer-col">
-          <li className="footer-list">
-            <a className="footer-link" href="#!">
-              Careers
-            </a>
-          </li>
-          <li className="footer-list">
-            <a className="footer-link" href="#!">
-              Support
-            </a>
-          </li>
-          <li className="footer-list">
-            <a className="footer-link" href="#!">
-              Privacy Policy
-            </a>
-          </li>
+          <FooterLink text="Careers" />
+          <FooterLink text="Support" />
+          <FooterLink text="Privacy Policy" />
         </ul>
         <div class="footer-cta">
           <Button>Request Invite</Button>

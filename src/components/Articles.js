@@ -2,11 +2,11 @@ import styled from "styled-components";
 import Title from "./styledElements/Title";
 import Article from "./Article";
 import { articlesData } from "../data";
-import { maxWidthLg, sectionSpacingSm } from "../abstracts/Mixins";
+import { maxWidthLg, sectionSpacingMd } from "../abstracts/Mixins";
 
 const Container = styled.div`
   ${maxWidthLg}
-  ${sectionSpacingSm}
+  ${sectionSpacingMd}
 
   .section-title {
     margin-bottom: 5rem;
