@@ -27,20 +27,16 @@ const Container = styled.div`
     color: var(--darkBlue);
   }
 
-  .hero-imgs {
-    position: relative;
-  }
-
   .hero-bg {
     position: absolute;
-    top: -10rem;
-    right: -10rem;
-    transform: scale(1.3);
+    z-index: 5;
+    width: 40%;
+    top: 20%;
   }
 
   .hero-phones {
-    position: absolute;
-    top: -30rem;
+    position: relative;
+    z-index: 100;
   }
 `;
 
