@@ -6,6 +6,10 @@ const Container = styled.a`
 
   &:hover,
   &:focus {
+    .article-img {
+      transform: scale(1.1);
+    }
+
     .article-title {
       color: var(--limeGreen);
     }
@@ -15,9 +19,14 @@ const Container = styled.a`
     padding: 0.5rem;
   }
 
+  .article-img-container {
+    overflow: hidden;
+  }
+
   .article-img {
     width: 100%;
     height: 20rem;
+    transition: var(--mainTransition);
   }
 
   .article-author {
@@ -45,7 +54,9 @@ function Article({ image, author, title, description }) {
   return (
     <article>
       <Container>
-        <img className="article-img" src={image} alt={title} />
+        <div className="article-img-container">
+          <img className="article-img" src={image} alt={title} />
+        </div>
         <div className="article-body">
           <small className="article-author">{author}</small>
           <h5 className="article-title">{title}</h5>
