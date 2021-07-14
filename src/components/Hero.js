@@ -6,9 +6,10 @@ import {
   maxWidthLg,
   sectionSpacingLg,
   headingStyles,
-  textStyles,
+  sectionSpacingSm,
 } from "../abstracts/Mixins";
 import Lead from "./styledElements/Lead";
+import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
   display: grid;
@@ -16,15 +17,40 @@ const Container = styled.div`
   gap: 5rem;
   align-items: center;
 
+  ${Responsive.lg`
+  grid-template-columns: 1fr;
+  `}
+
   .hero-info {
     ${maxWidthLg}
     ${sectionSpacingLg}
+
+    ${Responsive.lg`
+    ${sectionSpacingSm}
+    margin-top: 10rem;
+    `}
   }
 
   .hero-heading {
     ${headingStyles}
     font-size: 5rem;
     color: var(--darkBlue);
+
+    ${Responsive.lg`
+    position: relative;
+    z-index: 5; 
+    `}
+
+    ${Responsive.sm`
+    text-align: center;
+    `}
+  }
+
+  .hero-btn {
+    ${Responsive.sm`
+    width: 100%;
+    text-align: center;
+    `}
   }
 
   .hero-bg {
@@ -32,11 +58,27 @@ const Container = styled.div`
     z-index: 5;
     width: 40%;
     top: 20%;
+
+    ${Responsive.lg`
+    top: 10%;
+    right: 0;
+    width: 70%;
+    z-index: 1;
+    opacity: 0.2;
+    `}
+
+    ${Responsive.sm`
+    width: 90%;
+    `}
   }
 
   .hero-phones {
     position: relative;
     z-index: 100;
+
+    ${Responsive.lg`
+    display: none;
+    `}
   }
 `;
 
@@ -51,7 +93,7 @@ function Hero() {
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
           </Lead>
-          <Button>Request Invite</Button>
+          <Button className="hero-btn">Request Invite</Button>
         </div>
         <div className="hero-imgs">
           <img className="hero-bg" src={heroBg} alt="" />

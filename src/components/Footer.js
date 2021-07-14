@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import Button from "./styledElements/Button";
 import FooterLink from "./FooterLink";
+import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -19,6 +20,14 @@ const Container = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 5rem;
   align-items: center;
+
+  ${Responsive.xl`
+  grid-template-columns: repeat(3, 1fr);
+  `}
+
+  ${Responsive.md`
+  grid-template-columns: 1fr;
+  `}
 
   .footer-socials {
     display: flex;
@@ -36,6 +45,10 @@ const Container = styled.div`
     font-size: var(--sm);
     margin: 0 1rem;
     transition: var(--mainTransition);
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
 
     &:hover,
     &:focus {
@@ -61,21 +74,23 @@ function Footer() {
         <div className="footer-socials">
           <div className="footer-col">
             <img className="footer-logo" src={logo} alt="easybank logo" />
-            <a className="footer-social-link" href="#!">
-              <FaFacebookSquare />
-            </a>
-            <a className="footer-social-link" href="#!">
-              <FaYoutube />
-            </a>
-            <a className="footer-social-link" href="#!">
-              <FaTwitterSquare />
-            </a>
-            <a className="footer-social-link" href="#!">
-              <FaPinterestSquare />
-            </a>
-            <a className="footer-social-link" href="#!">
-              <FaInstagram />
-            </a>
+            <div>
+              <a className="footer-social-link" href="#!">
+                <FaFacebookSquare />
+              </a>
+              <a className="footer-social-link" href="#!">
+                <FaYoutube />
+              </a>
+              <a className="footer-social-link" href="#!">
+                <FaTwitterSquare />
+              </a>
+              <a className="footer-social-link" href="#!">
+                <FaPinterestSquare />
+              </a>
+              <a className="footer-social-link" href="#!">
+                <FaInstagram />
+              </a>
+            </div>
           </div>
         </div>
         <ul className="footer-col">
@@ -88,7 +103,7 @@ function Footer() {
           <FooterLink text="Support" />
           <FooterLink text="Privacy Policy" />
         </ul>
-        <div class="footer-cta">
+        <div className="footer-cta">
           <Button>Request Invite</Button>
           <p className="footer-copyright">© Easybank. All Rights Reserved</p>
         </div>

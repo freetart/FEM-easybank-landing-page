@@ -4,6 +4,7 @@ import Lead from "./styledElements/Lead";
 import { maxWidthLg, sectionSpacingMd } from "../abstracts/Mixins";
 import Feature from "./Feature";
 import { featuresData } from "../data";
+import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -12,6 +13,10 @@ const Container = styled.div`
   .section-lead {
     width: 50%;
     margin-bottom: 5rem;
+
+    ${Responsive.sm`
+    width: 100%;
+    `}
   }
 
   .features {
@@ -19,6 +24,16 @@ const Container = styled.div`
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
     align-items: center;
+
+    ${Responsive.xl`
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    `}
+
+    ${Responsive.sm`
+    grid-template-columns: 1fr;
+    text-align: center;
+    `}
   }
 `;
 

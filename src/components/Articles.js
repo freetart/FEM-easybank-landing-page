@@ -3,6 +3,7 @@ import Title from "./styledElements/Title";
 import Article from "./Article";
 import { articlesData } from "../data";
 import { maxWidthLg, sectionSpacingMd } from "../abstracts/Mixins";
+import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -17,6 +18,15 @@ const Container = styled.div`
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
     align-items: center;
+
+    ${Responsive.xl`
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    `}
+
+    ${Responsive.sm`
+    grid-template-columns: 1fr; 
+    `}
   }
 `;
 

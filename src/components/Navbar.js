@@ -3,6 +3,7 @@ import logo from "../images/logo.svg";
 import { maxWidthLg } from "../abstracts/Mixins";
 import NavLink from "./NavLink";
 import Button from "./styledElements/Button";
+import Responsive from "../abstracts/Responsive";
 
 const Nav = styled.nav`
   position: fixed;
@@ -26,6 +27,16 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 3rem;
+
+    ${Responsive.lg`
+    display: none;
+    `}
+  }
+
+  .nav-btn {
+    ${Responsive.lg`
+    display: none;
+    `}
   }
 `;
 
@@ -41,7 +52,7 @@ function Navbar() {
           <NavLink text="Blog" />
           <NavLink text="Careers" />
         </ul>
-        <Button>Request Invite</Button>
+        <Button className="nav-btn">Request Invite</Button>
       </Container>
     </Nav>
   );
