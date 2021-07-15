@@ -6,6 +6,7 @@ import Features from "./components/Features";
 import Articles from "./components/Articles";
 import Footer from "./components/Footer";
 import Tag from "./components/Tag";
+import MobileMenu from "./components/MobileMenu";
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -13,6 +14,7 @@ function App() {
     <>
       <Globals />
       <Navbar isActive={isActive} setIsActive={setIsActive} />
+      <MobileMenu isActive={isActive} />
       <Hero />
       <main>
         <Features />

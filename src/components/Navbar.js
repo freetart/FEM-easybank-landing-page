@@ -10,7 +10,7 @@ const Nav = styled.nav`
   position: fixed;
   width: 100%;
   background-color: var(--white);
-  z-index: 1000;
+  z-index: 2000;
 `;
 
 const Container = styled.div`

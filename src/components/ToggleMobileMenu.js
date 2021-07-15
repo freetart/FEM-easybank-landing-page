@@ -17,12 +17,12 @@ const Button = styled.button`
   `}
 
   .toggle-icon {
-    color: var(--veryDarkViolet);
+    color: var(--darkBlue);
     font-size: var(--md);
   }
 `;
 
-const ToggleMobileMenu = ({ isActive, setIsActive }) => {
+function ToggleMobileMenu({ isActive, setIsActive }) {
   return (
     <Button className="toggle" onClick={() => setIsActive(!isActive)}>
       {!isActive ? (
@@ -32,6 +32,6 @@ const ToggleMobileMenu = ({ isActive, setIsActive }) => {
       )}
     </Button>
   );
-};
+}
 
 export default ToggleMobileMenu;
