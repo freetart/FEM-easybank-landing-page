@@ -36,7 +36,7 @@ const Aside = styled.aside`
   }
 
   .menu-link {
-    font-size: var(--sm);
+    font-size: var(--md);
     color: var(--white);
     transition: var(--mainTransition);
 

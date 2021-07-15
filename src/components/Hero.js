@@ -33,7 +33,7 @@ const Container = styled.div`
 
   .hero-heading {
     ${headingStyles}
-    font-size: 5rem;
+    font-size: 7rem;
     color: var(--darkBlue);
 
     ${Responsive.lg`
@@ -43,6 +43,7 @@ const Container = styled.div`
 
     ${Responsive.sm`
     text-align: center;
+    font-size: 5rem;
     `}
   }
 
@@ -95,9 +96,9 @@ function Hero() {
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
           </Lead>
-          <Button className="hero-btn" data-aos="fade-up" data-aos-delay="200">
-            Request Invite
-          </Button>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <Button className="hero-btn">Request Invite</Button>
+          </div>
         </div>
         <div className="hero-imgs">
           <img className="hero-bg" src={heroBg} alt="" />
