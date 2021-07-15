@@ -12,6 +12,7 @@ import Lead from "./styledElements/Lead";
 import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
+  ${maxWidthLg}
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
@@ -22,7 +23,6 @@ const Container = styled.div`
   `}
 
   .hero-info {
-    ${maxWidthLg}
     ${sectionSpacingLg}
 
     ${Responsive.lg`
