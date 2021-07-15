@@ -24,3 +24,7 @@ yarn-error.log*
 
 # assets
 /src/assets
+
+# prettier
+.prettierrc.json
+
