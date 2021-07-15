@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Globals from "./abstracts/Globals";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -7,10 +8,11 @@ import Footer from "./components/Footer";
 import Tag from "./components/Tag";
 
 function App() {
+  const [isActive, setIsActive] = useState(false);
   return (
     <>
       <Globals />
-      <Navbar />
+      <Navbar isActive={isActive} setIsActive={setIsActive} />
       <Hero />
       <main>
         <Features />

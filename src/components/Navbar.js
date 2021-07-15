@@ -4,6 +4,7 @@ import { maxWidthLg } from "../abstracts/Mixins";
 import NavLink from "./NavLink";
 import Button from "./styledElements/Button";
 import Responsive from "../abstracts/Responsive";
+import ToggleMobileMenu from "./ToggleMobileMenu";
 
 const Nav = styled.nav`
   position: fixed;
@@ -40,7 +41,7 @@ const Container = styled.div`
   }
 `;
 
-function Navbar() {
+function Navbar({ isActive, setIsActive }) {
   return (
     <Nav>
       <Container>
@@ -53,6 +54,7 @@ function Navbar() {
           <NavLink text="Careers" />
         </ul>
         <Button className="nav-btn">Request Invite</Button>
+        <ToggleMobileMenu isActive={isActive} setIsActive={setIsActive} />
       </Container>
     </Nav>
   );
