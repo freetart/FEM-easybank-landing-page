@@ -48,7 +48,7 @@ function Features() {
             financial hub. Control your finances like never before.
           </Lead>
         </div>
-        <div className="features">
+        <div className="features" data-aos="fade-up">
           {featuresData.map((feature) => (
             <Feature
               key={feature.id}

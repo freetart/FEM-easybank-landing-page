@@ -37,7 +37,7 @@ function Articles() {
         <div className="section-title">
           <Title>Latest Articles</Title>
         </div>
-        <div className="articles">
+        <div className="articles" data-aos="fade-up">
           {articlesData.map((article) => (
             <Article
               key={article.id}

@@ -87,13 +87,17 @@ function Hero() {
     <header style={{ backgroundColor: "var(--white)" }}>
       <Container>
         <div className="hero-info">
-          <h1 className="hero-heading">Next generation digital banking</h1>
-          <Lead>
+          <h1 className="hero-heading" data-aos="fade-up">
+            Next generation digital banking
+          </h1>
+          <Lead data-aos="fade-up" data-aos-delay="100">
             Take your financial life online. Your Easybank account will be a
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
           </Lead>
-          <Button className="hero-btn">Request Invite</Button>
+          <Button className="hero-btn" data-aos="fade-up" data-aos-delay="200">
+            Request Invite
+          </Button>
         </div>
         <div className="hero-imgs">
           <img className="hero-bg" src={heroBg} alt="" />
@@ -101,6 +105,7 @@ function Hero() {
             className="hero-phones"
             src={heroPhones}
             alt="illustration of phones"
+            data-aos="fade-down"
           />
         </div>
       </Container>
