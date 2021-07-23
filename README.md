@@ -5,7 +5,7 @@ landing page challenge for frontend mentor
 site: https://fem-easybank-landing-page-challenge.netlify.app/
 
 #### Features
-
+- dynamic local data for features & articles sections
 - mobile menu
 - preloader
 - responsive design
